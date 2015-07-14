@@ -1,19 +1,38 @@
 <div class="row">
 
   <div class="col-sm-4 col-md-3">
-      
-    <p>SOMETHING GOES HERE!!</p>
-    <p>SOMETHING GOES HERE!!</p>
-    <p>SOMETHING GOES HERE!!</p>
-      
+    <div class="profile-display">
 
+      <%= image_tag(@user.image, :class => 'main-profile-image') %> 
 
+      <div class="user-username">
+        @<%= @user.username %>
+      </div>
+
+      <div class="user-bio">
+        <%= @user.bio %>
+      </div>         
+
+      <div class="user-location">
+        <i class="fa fa-map-marker"></i>
+          <%= @user.location %>
+      </div>  
+
+      <div class="user-created">
+        <i class="fa fa-link"></i>
+          www.somewebsite.com
+      </div>   
+
+      <div class="user-created">
+        <i class="fa fa-clock-o"></i>
+          Joined <%= @user.created_at.strftime("%b %d %y") %>
+      </div>   
+
+    </div>      
   </div>  <!-- col-md-4 --> 
 
 
   <div class="col-sm-8 col-md-9">
-
-    <h1><%= @user.username %>'s tweets:</h1>
 
     <% @user.posts.each do |post| %>
     <div class="row">
@@ -29,6 +48,11 @@
               @<%= @user.username %> -
               <%= post.created_at.strftime("%b %d") %><br>
               <%= post.content %>
+              <br>
+              <i class="fa fa-trash-o"></i> <i class="fa fa-star-o"></i>
+
+             <!--  <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure you want to remove your post?' } %> -->
+
           </div>
         </div>
       </div>

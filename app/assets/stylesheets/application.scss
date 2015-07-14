@@ -1,10 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "forms";
 
 
 body {
-  margin-top: 60px;
-  background-color: #ecf0f1;  
+  margin-top: 100px;
+  --background-color: #ecf0f1;
+  background-color: #1abc9c;  
 }
 
 /*
@@ -13,6 +15,13 @@ body {
 }
 
 */
+
+
+/***************
+
+----- NAV
+
+****************/
 
 
 .search-top-bar {
@@ -54,10 +63,41 @@ body {
   text-align: center;
 }
 
-.tweet-box-thumb img { width: 100%; }
+.tweet-box-thumb img { 
+  width: 100%; 
+}
 
 .tweet-box-content {
   --width: 460px;
   --border: 1px solid grey;
   float: left;
 }
+
+
+
+
+
+
+
+
+.main-profile-image img {
+  max-width: 100%;
+}
+
+
+.profile-display {
+  background-color: #e67e22;
+  --width: 80%;
+  --height: 140px; 
+  background-color: #FFFFFF;
+  --border: 1px solid grey;
+  margin-bottom: 8px;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.user-username {
+  font-size: 2em;
+}
+
+
