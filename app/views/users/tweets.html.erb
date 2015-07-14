@@ -1,13 +1,84 @@
-<h1><%= @user.username %>'s tweets:</h1>
+<div class="row">
+
+  <div class="col-sm-4 col-md-3">
+      
+    <p>SOMETHING GOES HERE!!</p>
+    <p>SOMETHING GOES HERE!!</p>
+    <p>SOMETHING GOES HERE!!</p>
+      
 
 
-<div class="tweet-box">
+  </div>  <!-- col-md-4 --> 
+
+
+  <div class="col-sm-8 col-md-9">
+
+    <h1><%= @user.username %>'s tweets:</h1>
 
     <% @user.posts.each do |post| %>
-        <p>
-            <%= image_tag(@user.image, :class => 'profile-thumbnail') %> 
-            <%= post.content %>
-        </p>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 tweet-box">
+        <div class="row">
+          <div class="col-xs-4 col-sm-3 tweet-box-thumb">
+
+              <%= image_tag(@user.image, :class => 'profile-thumbnail') %> 
+
+          </div>
+          <div class="col-xs-8 col-sm-9">
+            <div class="tweet-box-content">    
+              @<%= @user.username %> -
+              <%= post.created_at.strftime("%b %d") %><br>
+              <%= post.content %>
+          </div>
+        </div>
+      </div>
+       
+      </div> <!-- tweet-box -->    
+    </div>
     <% end %>
 
-</div> <!-- tweet-box -->
+  </div>  <!-- col-md-8 --> 
+
+</div>  <!-- row --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<nav>
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav> -->
+
+
+
+
+
+

@@ -4,7 +4,16 @@
 
 body {
   margin-top: 60px;
+  background-color: #ecf0f1;  
 }
+
+/*
+.navbar-inverse {
+  background-color: #1abc9c; 
+}
+
+*/
+
 
 .search-top-bar {
   display: inline-block;
@@ -14,8 +23,41 @@ body {
   width: 200px;
 }
 
-.profile-thumb {
-  max-width: 48px;
-  max-height: 48px;
-  border-radius: 25px;
+
+
+
+
+.tweet-box {
+  --width: 80%;
+  --height: 140px; 
+  background-color: #FFFFFF;
+  --border: 1px solid grey;
+  margin-bottom: 8px;
+  padding: 6px;
+  border-radius: 8px;
+
+}
+
+
+
+.profile-thumbnail {
+  --max-width: 55px;
+  --max-height: 55px;
+  border-radius: 8px;
+}
+
+.tweet-box-thumb {
+  max-width: 80%;
+  --float: left;
+  --padding-right: 60px;  
+  --margin: auto;
+  text-align: center;
+}
+
+.tweet-box-thumb img { width: 100%; }
+
+.tweet-box-content {
+  --width: 460px;
+  --border: 1px solid grey;
+  float: left;
 }
