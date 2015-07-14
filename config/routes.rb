@@ -26,10 +26,14 @@
 
 Rails.application.routes.draw do
   resources :posts
-  resources :users
+  resources :users do
+    get 'tweets' => 'users#tweets'
+  end
 
 
   root :to => "posts#index"
+
+  get '/users/:id/tweets' => 'users#tweets'
 
   get '/signup' => 'users#new'
 

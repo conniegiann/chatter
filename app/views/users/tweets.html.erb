@@ -1,0 +1,13 @@
+<h1><%= @user.username %>'s tweets:</h1>
+
+
+<div class="tweet-box">
+
+    <% @user.posts.each do |post| %>
+        <p>
+            <%= image_tag(@user.image, :class => 'profile-thumbnail') %> 
+            <%= post.content %>
+        </p>
+    <% end %>
+
+</div> <!-- tweet-box -->

@@ -2,13 +2,11 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
-  # GET /users.json
   def index
     @users = User.all
   end
 
   # GET /users/1
-  # GET /users/1.json
   def show
   end
 
@@ -22,7 +20,6 @@ class UsersController < ApplicationController
   end
 
   # POST /users
-  # POST /users.json
   def create
     @user = User.new(user_params)
 
@@ -38,7 +35,6 @@ class UsersController < ApplicationController
   end
 
   # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
   def update
     respond_to do |format|
       if @user.update(user_params)
@@ -52,7 +48,6 @@ class UsersController < ApplicationController
   end
 
   # DELETE /users/1
-  # DELETE /users/1.json
   def destroy
     @user.destroy
     respond_to do |format|
@@ -61,14 +56,40 @@ class UsersController < ApplicationController
     end
   end
 
+
+  def tweets
+    @user = User.find params[:user_id]
+  end
+
+
+  # users individual tweets
+  # def tweets
+  #   @tweet = Posts.all where params[:user_id]user_id == current.user_id
+
+
+
+  #   # individual tweets to be displayed by current user.
+  #   #
+
+
+  #   user = User.find_by :email => params[:email]
+  #   if user.present? && user.authenticate(params[:password])
+  #     session[:user] = user.id
+  #     redirect_to root_path
+
+  #   end
+
+  # end
+
+
+
+
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:id, :email, :username, :password, :password_digest, :location, :image, :bio)
+      params.require(:user).permit(:id, :email, :username, :password, :password_confirmation, :location, :image, :bio)
     end
 end

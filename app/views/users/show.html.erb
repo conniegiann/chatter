@@ -15,10 +15,6 @@
   <%= @user.username %>
 </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
 
 <p>
   <strong>Password digest:</strong>
@@ -39,6 +35,13 @@
   <strong>Bio:</strong>
   <%= @user.bio %>
 </p>
+
+<% @user.posts.each do |post| %>
+  <p>
+  <%= post.content %>
+  </p>
+  <hr>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

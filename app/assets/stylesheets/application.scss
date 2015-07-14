@@ -1,0 +1,21 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body {
+  margin-top: 60px;
+}
+
+.search-top-bar {
+  display: inline-block;
+}
+
+.search-tweets {
+  width: 200px;
+}
+
+.profile-thumb {
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 25px;
+}
