@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  # layout false, only: [:new]
 
   # GET /users
   def index
@@ -59,6 +60,7 @@ class UsersController < ApplicationController
 
   def tweets
     @user = User.find params[:user_id]
+    @post = Post.new
   end
 
 

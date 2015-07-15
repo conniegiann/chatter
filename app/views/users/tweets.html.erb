@@ -4,7 +4,6 @@
     <div class="profile-display">
 
       <%= image_tag(@user.image, :class => 'main-profile-image') %> 
-
       <div class="user-username">
         @<%= @user.username %>
       </div>
@@ -26,13 +25,50 @@
       <div class="user-created">
         <i class="fa fa-clock-o"></i>
           Joined <%= @user.created_at.strftime("%b %d %y") %>
-      </div>   
+      </div>  
 
-    </div>      
+      <div class="user-created">
+        <i class="fa fa-pencil"></i>
+          <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
+      </div> 
+
+
+
+
+
+
+    </div>  
+
+    <div class="compose-post">
+      <%= form_for(@post) do |f| %>
+
+        <div class="field">
+          <%= f.text_area :content, placeholder: "What's on your mind? ..", class: "form-control", rows: "5" %>
+        </div>
+
+        <div class="actions">
+          <%= submit_tag 'create post', class: "btn btn-lg btn-primary btn-block" %>
+        </div>
+      <% end %>
+    </div>
+
+
+
+
+
+
+
+
   </div>  <!-- col-md-4 --> 
 
 
+
   <div class="col-sm-8 col-md-9">
+
+
+    <p><%= @user.posts.count %> posts</p>
+
+
 
     <% @user.posts.each do |post| %>
     <div class="row">
@@ -51,7 +87,7 @@
               <br>
               <i class="fa fa-trash-o"></i> <i class="fa fa-star-o"></i>
 
-             <!--  <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure you want to remove your post?' } %> -->
+<%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure you want to remove your post?' } %>
 
           </div>
         </div>
@@ -99,8 +135,8 @@
       </a>
     </li>
   </ul>
-</nav> -->
-
+</nav>
+ -->
 
 
 

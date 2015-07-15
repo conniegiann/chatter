@@ -2,6 +2,10 @@
 @import "bootstrap";
 @import "forms";
 
+body.session-new nav.navbar,
+body.users-new nav.navbar {
+  display: none;
+}
 
 body {
   margin-top: 100px;
