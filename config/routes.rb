@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   end
 
 
-  root :to => "posts#index"
+  root :to => "session#new"
 
   get '/users/:id/tweets' => 'users#tweets'
 

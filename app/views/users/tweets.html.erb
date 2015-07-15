@@ -28,8 +28,10 @@
       </div>  
 
       <div class="user-created">
+      <% if @current_user.present? && @current_user == @user%>
         <i class="fa fa-pencil"></i>
           <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
+      <% end %>
       </div> 
 
 
@@ -42,8 +44,8 @@
     <div class="compose-post">
       <%= form_for(@post) do |f| %>
 
-        <div class="field">
-          <%= f.text_area :content, placeholder: "What's on your mind? ..", class: "form-control", rows: "5" %>
+        <div class="field tweet-submit-form">
+          <%= f.text_area :content, placeholder: "What's on your mind? ..", maxlength: "140", class: "form-control", rows: "5" %>
         </div>
 
         <div class="actions">
@@ -85,10 +87,10 @@
               <%= post.created_at.strftime("%b %d") %><br>
               <%= post.content %>
               <br>
-              <i class="fa fa-trash-o"></i> <i class="fa fa-star-o"></i>
-
-<%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure you want to remove your post?' } %>
-
+              <% if @current_user.present? && @current_user == @user %>
+                <i class="fa fa-trash-o"></i>
+                <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure you want to remove your post?' } %>
+              <% end %>
           </div>
         </div>
       </div>
