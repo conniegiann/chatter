@@ -1,6 +1,5 @@
-<h1>Login</h1>
-
-<%= form_tag('/login', class: "form-signin") do %>
+<div class="login-form-bounding-box">
+<%= form_tag('/login', class: "form-signin card card-container ") do %>
 
   <%= label_tag  :email, nil, class: "sr-only" %>
   <%= text_field_tag :email, nil, class: "form-control", placeholder: "email address", :autofocus => true %>
@@ -12,4 +11,4 @@
 
 <% end %>
 
-<%= link_to 'Sign up', signup_path %>
+</div>

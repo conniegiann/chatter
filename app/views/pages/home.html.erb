@@ -1,18 +1,29 @@
 <div class="col-sm-12 home-page">
 
+<div class="homepage-display">
 
-  <div class="chatter-logo">
-    <h1>chatter</h1>  
+
+<%= render 'chattermainlogo' %>
+
+    <div class="chatter-logo">
+      <h1>chatter</h1>  
+    </div>
+
+    <div>
+      <h2>a micro social network to chatter with your friends</h2> 
+    </div>
+
+    <div class="homepage-login-signup">
+
+      <div class="homepage-login-btn">
+        <%= link_to 'Login', login_path %>
+      </div>
+
+      <div class="homepage-signup-btn">
+        <%= link_to 'Sign up', signup_path %>
+      </div>
+
+    </div>  
+
   </div>
-
-
-  <div>
-    <h2>a micro social network to chatter with your friends</h2> 
-  </div>
-
 </div>
-
-
-<%= link_to 'Login', login_path %>
-
-<%= link_to 'Sign up', signup_path %>
