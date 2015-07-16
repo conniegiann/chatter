@@ -39,3 +39,46 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+
+
+
+
+
+<% @users.each do |user| %>
+
+        <%= user.username %><br>
+        <%= image_tag(user.image, :class => 'profile-thumbnail') %>
+
+    <% end %>
+
+
+<div class="row">
+  <div class="col-sm-4 col-md-3"></div>
+  <div class="col-sm-8 col-md-9">
+
+    <% Post.all.each do |post| %>
+      <% user = User.find post.user_id %>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 tweet-box">
+          <div class="row">
+            <div class="col-xs-4 col-sm-3 tweet-box-thumb">
+              <%= image_tag(user.image, :class => 'profile-thumbnail') %> 
+            </div>
+            <div class="col-xs-8 col-sm-9">
+              <div class="tweet-box-content">    
+                @<%= user.username %> -
+                <%= post.created_at.strftime("%b %d") %><br>
+                <%= post.content %>
+                <br>
+                <% if @current_user.present? && @current_user == user %>
+                  <i class="fa fa-trash-o"></i>
+                  <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure you want to remove your post?' } %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div> <!-- tweet-box -->    
+      </div>
+    <% end %>
+  </div>  <!-- col-md-8 --> 
+</div>
