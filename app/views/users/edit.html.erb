@@ -2,6 +2,8 @@
 
 <div class="edit-profile-container"></div>
 
+<div class="col-xs-3">
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -48,8 +50,13 @@
     <%= f.text_area :bio, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag 'Edit Profile', class: "btn btn-primary btn-xs" %>
+
+
+
   </div>
 <% end %>
+</div>
 
-<%= link_to 'Back', user_tweets_path(@current_user) %>
+<br>
+

@@ -21,6 +21,13 @@ body {
   --background-color: #505D72;
 }
 
+body a {
+  text-decoration: none;
+}
+
+body a:hover {
+  text-decoration: none;
+}
 
 .container {
   --background-color: #505D72;
@@ -134,8 +141,27 @@ font-size: 32px;
 }
 
 
+.all-users-display-container {
+  max-width: 720px;
+    margin: 0 auto;
 
+}
 
+.all-users-display {
+  max-width: 240px;
+  max-height: 212px;
+  border-radius: 10px;
+  background-color: #91A2B6;
+  float: left;
+  display: inline-block;
+  margin: 6px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.all-users-display img {
+width: 80%;
+}
 
 
 

@@ -32,18 +32,29 @@
 }
  
 .btn-primary {
-    background: #0099cc;
+    background: #c0392b;
     color: #ffffff;
 }
  
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: #33a6cc;
+    background: #e74c3c;
 }
  
 .btn-primary:active, .btn-primary.active {
-    background: #007299;
+    background: #e74c3c;
     box-shadow: none;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -51,20 +62,25 @@
 textarea:focus,
 input.form-control:focus,
 .uneditable-input:focus {   
-  border-color: rgba(126, 239, 104, 0.8);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+  border-color: rgba(254, 242, 240, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(254, 242, 240, 0.6);
   outline: 0 none;
 }
 
+/*
+textarea:focus,
+input.form-control:focus,
+.uneditable-input:focus {   
+  border-color: rgba(126, 239, 104, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(157, 288, 119, 0.6);
+  outline: 0 none;
+}
 
-
-
-
-
+*/
 
 
 .login-form-bounding-box {
-    background-color: lightblue;
+    background-color: #91A2B6;
     width: 360px;
     height: 300px;
     padding: 20px 20px;
