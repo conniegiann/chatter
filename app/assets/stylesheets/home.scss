@@ -1,20 +1,43 @@
 /* *** DISPLAY BOX *** */
 .homepage-display-box {
-  margin: auto;
-  display: inline-block;
+
+  --width: 340px;
+  --margin: 0 auto;
+
 }
 
 /* *** LOGO *** */
-.chatter-logo h1 {
-  font-size: 100px;
+.chatter-logo {
+  padding-bottom: 20px;
+  width: 340px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-/* *** LOG IN / SIGN UP CONATINER *** */
+.chatter-logo img {
+padding-left: 32px; 
+  margin: 0 auto;
+}
+
+
+/* *** HOMEPAGE-BIO *** */
+.homepage-bio h2 {
+  width: 340px;
+  margin: 0 auto;
+  font-weight: 200; 
+  letter-spacing: 0.5px;
+}
+
+.homepage-bio {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* *** LOG IN / SIGN UP CONTAINER *** */
 .homepage-login-signup {
   width: 300px;
   height: 100px;
-  border: 1px solid;
-  background: yellow;
   margin: 0 auto;
 }
 
@@ -23,22 +46,23 @@
   width: 92px;
   height: 40px;
   padding: 2px 2px 2px 2px;
-  background-color: red;
+  background-color: #c0392b;
   border-radius: 10px;
   font-size: 22px;
   text-align: center;
   text-decoration: none;
   margin: 0 auto;
-  width: 50%;
+  width: 48%;
   float: left;
 }
 .homepage-login-btn:hover {
-  background-color: purple; 
+  background-color: #e74c3c; 
 }
 
 .homepage-login-btn a {
   text-decoration: none;
   color: white;
+  margin: 2px;
 }
 
 /* *** SIGN UP BUTTON *** */
@@ -48,22 +72,35 @@
   height: 40px;
   padding: 2px 2px 2px 2px;
   border: 1px solid;
-  background-color: red;
+  background-color: #c0392b;
   color: white;
   border-radius: 10px;
   font-size: 22px;
   text-align: center; 
   margin: 0 auto;
-  width: 50%;
+  width: 48%;
   float: left;
 }
 
 .homepage-signup-btn:hover {
-  background-color: purple; 
+  background-color: #e74c3c; 
 }
 
 .homepage-signup-btn a {
   text-decoration: none;
   color: white;  
 }
+
+/* *** BREAK *** */
+
+.break {
+  width: 2pxpx;
+  height: 40px;
+  background-color: #ecf0f1;
+  margin: 0 auto;
+  width: 4%;
+  float: left;
+}
+
+
 

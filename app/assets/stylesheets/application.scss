@@ -4,6 +4,8 @@
 @import "home";
 
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
 
 body.session-new nav.navbar,
 body.users-new nav.navbar,
@@ -39,12 +41,9 @@ body {
 ****************/
 
 
-.search-top-bar {
-
-}
-
-.search-tweets {
-  width: 200px;
+.navbar-brand {
+font-family: 'Pacifico', cursive;
+font-size: 32px;
 }
 
 
