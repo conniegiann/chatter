@@ -27,13 +27,15 @@
 #
 
 Rails.application.routes.draw do
+  get 'pages/home'
+
   resources :posts
   resources :users do
     get 'tweets' => 'users#tweets'
   end
 
 
-  root :to => "session#new"
+  root :to => "pages#home"
 
   get '/users/:id/tweets' => 'users#tweets'
 

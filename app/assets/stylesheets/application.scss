@@ -2,15 +2,25 @@
 @import "bootstrap";
 @import "forms";
 
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
 body.session-new nav.navbar,
-body.users-new nav.navbar {
+body.users-new nav.navbar,
+body.pages-home nav.navbar {
   display: none;
 }
 
 body {
+  font-family: 'Lato', sans-serif;
   margin-top: 100px;
-  --background-color: #ecf0f1;
-  background-color: #1abc9c;  
+  background-color: #ecf0f1;
+  --background-color: #1abc9c;  
+  --background-color: #505D72;
+}
+
+
+.container {
+  --background-color: #505D72;
 }
 
 /*
@@ -84,8 +94,10 @@ body {
 
 
 
-.main-profile-image img {
-  max-width: 40%;
+.main-profile-image {
+  max-width: 100%;
+  border-radius: 8px;
+  background-color: purple;
 }
 
 
@@ -96,12 +108,34 @@ body {
   background-color: #FFFFFF;
   --border: 1px solid grey;
   margin-bottom: 8px;
-  padding: 6px;
+  padding: 8px;
   border-radius: 8px;
 }
 
 .user-username {
-  font-size: 2em;
+  font-size: 3em;
+  font-weight: 300;
 }
+
+
+
+.user-post-count {
+  background-color: #FFFFFF;
+  margin-bottom: 8px;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.user-post-count span {
+  font-weight: 800;
+}
+
+
+
+
+
 
 

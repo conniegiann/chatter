@@ -28,6 +28,10 @@ gem 'bootstrap-sass'
 
 gem 'remove_turbolinks'
 
+
+gem 'faker'
+
+
 group :development do
   gem 'pry-rails'
   gem 'pry-stack_explorer'
@@ -46,7 +50,7 @@ end
 
 group :development, :test do
 
-  gem 'faker'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 

@@ -38,12 +38,15 @@
       <% end %>
       </div> 
 
-
-
-
-
-
     </div>  
+
+
+      <div class="user-post-count">
+        <p><i class="fa fa-comment-o"></i> <%= @user.username %> has    <span><%= @user.posts.count %></span> chatters</p>
+      </div>
+
+
+
 
     <div class="compose-post">
       <% if @current_user.present? && @current_user == @user%>
@@ -54,29 +57,19 @@
           </div>
 
           <div class="actions">
-            <%= submit_tag 'create post', class: "btn btn-lg btn-primary btn-block" %>
+            <%= submit_tag 'chatter', class: "btn btn-lg btn-primary btn-block" %>
           </div>
         <% end %>
       <% end %>
     </div>
 
-
-
-
-
-
-
+  <br>
 
   </div>  <!-- col-md-4 --> 
 
 
 
   <div class="col-sm-8 col-md-9">
-
-
-    <p><%= @user.posts.count %> posts</p>
-
-
 
     <% @user.posts.each do |post| %>
     <div class="row">
@@ -89,7 +82,7 @@
           </div>
           <div class="col-xs-8 col-sm-9">
             <div class="tweet-box-content">    
-              @<%= @user.username %> -
+              <%= link_to "@#{ @user.username }", user_tweets_path(@user) %> -
               <%= post.created_at.strftime("%b %d") %><br>
               <%= post.content %>
               <br>

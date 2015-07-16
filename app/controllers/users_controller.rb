@@ -26,6 +26,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        session[:user] = @user.id
         format.html { redirect_to user_tweets_path(@user), notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -92,6 +93,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:id, :email, :username, :password, :password_confirmation, :location, :image, :bio)
+      params.require(:user).permit(:id, :email, :username, :password, :password_confirmation, :location, :website, :image, :bio)
     end
 end
