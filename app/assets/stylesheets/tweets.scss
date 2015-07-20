@@ -35,6 +35,14 @@
   float: left;
 }
 
+.user-name-link a {
+  color: #000000;
+}
+
+.delete-link a {
+  color: #c0392b;
+}
+
 /* *** MAIN PROFILE IMAGE *** */
 .main-profile-image {
   max-width: 100%;
@@ -70,7 +78,8 @@
 }
 
 .user-post-count img {
-  width: 28px;
+  width: 30px;
+  margin-bottom: 6px;
 }
 
 .user-post-count span {

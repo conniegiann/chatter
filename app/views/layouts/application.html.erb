@@ -26,11 +26,16 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-              <% if @current_user %>
-                <li><%= link_to "Home", user_tweets_path(@current_user)%></li>
-                <li><%= link_to "Chatter Feed", posts_path(:id => @current_user.id)%></li>
-                <li><%= link_to "All Users", users_path(:id => @current_user.id)%></li>
-                <li><%= link_to "Logout #{ @current_user.username }",login_path, :method => 'delete' %></li>
+              <% if @current_user %>        
+
+                <li><%= link_to '<i class="fa fa-home"></i> home'.html_safe, user_tweets_path(@current_user)%></li>
+
+                <li><%= link_to '<i class="fa fa-pencil"></i> edit profile'.html_safe, edit_user_path(@current_user)%></li>                
+
+                <li><%= link_to '<i class="fa fa-comments-o"> feed</i>'.html_safe, posts_path(:id => @current_user.id)%></li>
+
+                <li><%= link_to '<i class="fa fa-users"></i> users'.html_safe, users_path(:id => @current_user.id)%></li>
+                <li><%= link_to "logout #{ @current_user.username }",login_path, :method => 'delete' %></li>
               <% end %>
                 </ul>
         </div><!-- /.nav-collapse -->

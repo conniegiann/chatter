@@ -34,18 +34,15 @@
       <div class="user-created">
       <% if @current_user.present? && @current_user == @user%>
         <i class="fa fa-pencil"></i>
-          <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
+          <%= link_to 'edit profile', edit_user_path(@current_user) %>
       <% end %>
       </div> 
 
     </div>  
 
-
       <div class="user-post-count">
-        <p><%= image_tag("chatter-tiny.png")%>  <!-- <i class="fa fa-comment-o"> --></i> <%= @user.username %> has    <span><%= @user.posts.count %></span> chatters</p>
+        <p><%= image_tag("chatter-tiny.png")%>  <!-- <i class="fa fa-comment-o"> --></i> <%= @user.username %> has <span><%= @user.posts.count %></span> chatters</p>
       </div>
-
-
 
 
     <div class="compose-post">
@@ -76,8 +73,9 @@
       <div class="col-sm-8 col-sm-offset-2 tweet-box">
         <div class="row">
           <div class="col-xs-4 col-sm-3 tweet-box-thumb">
-
-              <%= image_tag(@user.image, :class => 'profile-thumbnail') %> 
+            <div class="username-link">
+              <%= image_tag(@user.image, :class => 'profile-thumbnail') %>
+            </div>
 
           </div>
           <div class="col-xs-8 col-sm-9">
@@ -86,10 +84,17 @@
               <%= post.created_at.strftime("%b %d") %><br>
               <%= post.content %>
               <br>
-              <% if @current_user.present? && @current_user == @user %>
-                <i class="fa fa-trash-o"></i>
-                <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure you want to remove your post?' } %>
-              <% end %>
+              <div class="delete-link">
+                <% if @current_user.present? && @current_user == @user %>
+                  
+                  <%= link_to link_to '<i class="fa fa-trash-o"></i>'.html_safe, post, method: :delete, data: { confirm: 'Are you sure you want to remove your post?' } %>
+                <% end %>
+              </div>
+
+
+
+
+
           </div>
         </div>
       </div>

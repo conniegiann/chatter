@@ -18,6 +18,7 @@ padding-left: 32px;
   margin: 0 auto;
   font-weight: 200; 
   letter-spacing: 0.5px;
+  color: #505D72;
 }
 
 .homepage-bio {
@@ -35,11 +36,11 @@ padding-left: 32px;
 /* *** LOG IN BUTTON *** */
 .homepage-login-btn {
   width: 92px;
-  height: 40px;
-  padding: 2px 2px 2px 2px;
-  background-color: #c0392b;
+  height: 44px;
+  padding: 8px 2px 2px 2px;
+  background-color: #505D72;
   border-radius: 10px;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
   text-decoration: none;
   margin: 0 auto;
@@ -47,7 +48,7 @@ padding-left: 32px;
   float: left;
 }
 .homepage-login-btn:hover {
-  background-color: #e74c3c; 
+  background-color: #91A2B6; 
 }
 
 .homepage-login-btn a {
@@ -59,13 +60,13 @@ padding-left: 32px;
 /* *** SIGN UP BUTTON *** */
 .homepage-signup-btn {
   width: 92px;
-  height: 40px;
-  padding: 2px 2px 2px 2px;
+  height: 44px;
+  padding: 8px 2px 2px 2px;
   border: 1px solid;
-  background-color: #c0392b;
+  background-color: #505D72;
   color: white;
   border-radius: 10px;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center; 
   margin: 0 auto;
   width: 48%;
@@ -73,7 +74,7 @@ padding-left: 32px;
 }
 
 .homepage-signup-btn:hover {
-  background-color: #e74c3c; 
+  background-color: #91A2B6; 
 }
 
 .homepage-signup-btn a {
