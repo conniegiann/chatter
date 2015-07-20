@@ -1,16 +1,8 @@
-
-<h1>All Chatter Users</h1>
-
-
-
-
-
-
 <% @users.each do |user| %>
-
 
       <div class="all-users-display">
         <%= user.username %><br>
         <%= image_tag(user.image, :class => 'profile-thumbnail') %>
       </div>
-    <% end %>
+
+<% end %>

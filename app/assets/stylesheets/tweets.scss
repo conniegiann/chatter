@@ -1,0 +1,99 @@
+/* *** TWEET BOX *** */
+.tweet-box {
+  --width: 80%;
+  --height: 140px; 
+  background-color: #FFFFFF;
+  --border: 1px solid grey;
+  margin-bottom: 8px;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+/* *** THUMBNAIL IMGS *** */
+.profile-thumbnail {
+  --max-width: 55px;
+  --max-height: 55px;
+  border-radius: 8px;
+}
+
+.tweet-box-thumb {
+  max-width: 80%;
+  --float: left;
+  --padding-right: 60px;  
+  --margin: auto;
+  text-align: center;
+}
+
+.tweet-box-thumb img { 
+  width: 100%; 
+}
+
+/* *** TWEET BOX CONTENT *** */
+.tweet-box-content {
+  --width: 460px;
+  --border: 1px solid grey;
+  float: left;
+}
+
+/* *** MAIN PROFILE IMAGE *** */
+.main-profile-image {
+  max-width: 100%;
+  border-radius: 8px;
+  background-color: purple;
+}
+
+/* *** PROFILE DISPLAY BOX *** */
+.profile-display {
+  background-color: #e67e22;
+  --width: 120%;
+  --height: 140px; 
+  background-color: #FFFFFF;
+  --border: 1px solid grey;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.user-username {
+  font-size: 3em;
+  font-weight: 300;
+}
+
+.user-post-count {
+  background-color: #FFFFFF;
+  margin-bottom: 8px;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.user-post-count img {
+  width: 28px;
+}
+
+.user-post-count span {
+  font-weight: 800;
+}
+
+.all-users-display-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.all-users-display {
+  max-width: 240px;
+  max-height: 212px;
+  border-radius: 10px;
+  background-color: #91A2B6;
+  float: left;
+  display: inline-block;
+  margin: 6px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.all-users-display img {
+  width: 80%;
+}

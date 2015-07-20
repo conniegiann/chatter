@@ -1,30 +1,23 @@
-/*### SIGN IN / LOGIN FORMS ### */
-
+/* *** SIGN IN / LOGIN FORMS *** */
 .new-user-form {
     margin: auto;
 }
-
 
 .card-container.card {
     max-width: 350px;
     padding: 40px 40px;
 }
 
-
 .form-control {
     margin-bottom: 4px;
 }
 
-
-
-
-
+/* *** BTNS *** */
 .btn {
     padding: 14px 24px;
     border: 0 none;
     font-weight: 700;
     letter-spacing: 1px;
-    --text-transform: uppercase;
 }
  
 .btn:focus, .btn:active:focus, .btn.active:focus {
@@ -45,20 +38,7 @@
     box-shadow: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* *** TEXT AREA FOCUS *** */
 textarea:focus,
 input.form-control:focus,
 .uneditable-input:focus {   
@@ -67,18 +47,7 @@ input.form-control:focus,
   outline: 0 none;
 }
 
-/*
-textarea:focus,
-input.form-control:focus,
-.uneditable-input:focus {   
-  border-color: rgba(126, 239, 104, 0.8);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(157, 288, 119, 0.6);
-  outline: 0 none;
-}
-
-*/
-
-
+/* *** LOGIN FORM BOUNDING BOX *** */
 .login-form-bounding-box {
     background-color: #91A2B6;
     width: 360px;
@@ -88,12 +57,10 @@ input.form-control:focus,
     margin: auto;
 }
 
-
-
-
-
+/* *** EDIT PROFILE CONTAINER *** */
 .edit-profile-container {
-    max-width: 400px;
+    max-width: 380px;
+    font-weight: 300;
 }
 
 

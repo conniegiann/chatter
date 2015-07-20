@@ -2,23 +2,25 @@
 @import "bootstrap";
 @import "forms";
 @import "home";
+@import "navbar";
+@import "tweets";
 
+/* *** FONTS *** */
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 
-
+/* *** NAV BAR STYLE NOT APPLIED TO BELOW PAGES *** */
 body.session-new nav.navbar,
 body.users-new nav.navbar,
 body.pages-home nav.navbar {
   display: none;
 }
 
+/* *** BODY *** */
 body {
   font-family: 'Lato', sans-serif;
   margin-top: 100px;
   background-color: #ecf0f1;
-  --background-color: #1abc9c;  
-  --background-color: #505D72;
 }
 
 body a {
@@ -28,145 +30,6 @@ body a {
 body a:hover {
   text-decoration: none;
 }
-
-.container {
-  --background-color: #505D72;
-}
-
-/*
-.navbar-inverse {
-  background-color: #1abc9c; 
-}
-
-*/
-
-
-/***************
-
------ NAV
-
-****************/
-
-
-.navbar-brand {
-font-family: 'Pacifico', cursive;
-font-size: 32px;
-}
-
-
-
-
-
-.tweet-box {
-  --width: 80%;
-  --height: 140px; 
-  background-color: #FFFFFF;
-  --border: 1px solid grey;
-  margin-bottom: 8px;
-  padding: 6px;
-  border-radius: 8px;
-
-}
-
-
-
-.profile-thumbnail {
-  --max-width: 55px;
-  --max-height: 55px;
-  border-radius: 8px;
-}
-
-.tweet-box-thumb {
-  max-width: 80%;
-  --float: left;
-  --padding-right: 60px;  
-  --margin: auto;
-  text-align: center;
-}
-
-.tweet-box-thumb img { 
-  width: 100%; 
-}
-
-.tweet-box-content {
-  --width: 460px;
-  --border: 1px solid grey;
-  float: left;
-}
-
-
-
-
-
-
-
-
-.main-profile-image {
-  max-width: 100%;
-  border-radius: 8px;
-  background-color: purple;
-}
-
-
-.profile-display {
-  background-color: #e67e22;
-  --width: 120%;
-  --height: 140px; 
-  background-color: #FFFFFF;
-  --border: 1px solid grey;
-  margin-bottom: 8px;
-  padding: 8px;
-  border-radius: 8px;
-}
-
-.user-username {
-  font-size: 3em;
-  font-weight: 300;
-}
-
-
-
-.user-post-count {
-  background-color: #FFFFFF;
-  margin-bottom: 8px;
-  padding: 14px;
-  border-radius: 8px;
-  font-size: 1.2em;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.user-post-count span {
-  font-weight: 800;
-}
-
-
-.all-users-display-container {
-  max-width: 720px;
-    margin: 0 auto;
-
-}
-
-.all-users-display {
-  max-width: 240px;
-  max-height: 212px;
-  border-radius: 10px;
-  background-color: #91A2B6;
-  float: left;
-  display: inline-block;
-  margin: 6px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.all-users-display img {
-width: 80%;
-}
-
-
-
-
-
 
 
 

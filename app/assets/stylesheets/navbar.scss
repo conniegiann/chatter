@@ -1,0 +1,38 @@
+/* *** NAVBAR LOGO *** */
+.navbar-brand {
+font-family: 'Pacifico', cursive;
+font-size: 28px;
+}
+
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #bdc3c7;
+}
+
+/* *** NAVBAR COLOR *** */
+.navbar-default {
+    background-color: #505D72;
+    border-color: #505D72;
+}
+
+/* *** NAVBAR LINKS *** */
+.navbar-default .navbar-nav li a {
+  color: #ecf0f1;
+  font-weight: 100;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  color: #bdc3c7;
+}
+
+/* *** NAVBAR TOGGLE BTN *** */
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #505D72;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: grey;
+}
